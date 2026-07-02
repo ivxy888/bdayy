@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Mrs. Lee Know</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <!-- Background Music -->
+
+    <audio id="bgMusic" loop>
+
+        <source src="song.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- Spotify Intro -->
+
+    <div id="introScreen">
+
+        <div class="music-player">
+
+    <p class="nowPlaying">
+
+        NOW PLAYING
+
+    </p>
+
+    <h2>
+
+        Don't Look Back In Anger
+
+    </h2>
+
+    <h3>
+
+        Oasis
+
+    </h3>
+
+    <button id="playButton" onclick="startExperience()">
+
+        ▶
+
+    </button>
+
+</div>
+
+    </div>
+
+    <!-- Birthday Page -->
+
+    <div class="overlay hidden" id="pageContent">
+
+        <div class="card">
+
+            <h1>
+
+                Happy Birthday<br>
+                Mrs. Lee Know
+
+            </h1>
+
+            <p>
+
+                Wishing you a birthday filled with endless smiles,
+                love, laughter, and unforgettable memories.
+                May every moment today be as beautiful and special
+                as you are.
+
+            </p>
+
+            <a href="page2.html" class="button">
+
+                Continue...
+
+            </a>
+
+        </div>
+
+    </div>
+
+<script>
+
+const music = document.getElementById("bgMusic");
+
+function startExperience(){
+
+    music.play();
+
+    document.getElementById("introScreen").style.display = "none";
+
+    document.getElementById("pageContent").classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+
+</html>

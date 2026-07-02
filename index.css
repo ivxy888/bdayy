@@ -1,0 +1,339 @@
+/*==================================
+            RESET
+==================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html,
+body{
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/*==================================
+         PAGE BACKGROUND
+==================================*/
+
+body{
+
+    background:url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/*==================================
+        SPOTIFY INTRO SCREEN
+==================================*/
+
+#introScreen{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+     background:url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    z-index:9999;
+
+}
+
+/*==========================
+      MUSIC PLAYER
+==========================*/
+
+.music-player{
+
+    width:380px;
+
+    padding:50px 35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.20);
+
+}
+
+.nowPlaying{
+
+    color:black;
+
+    font-size:15px;
+
+    letter-spacing:5px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.music-player h2{
+
+    color:black !important;
+
+    font-size:42px; 
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.music-player h3{
+
+    color:black !important;
+
+    font-size:24px;
+
+    font-weight:500;
+
+    margin-bottom:40px;
+
+}
+
+#playButton{
+
+    width:90px;
+
+    height:90px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#8CECCB;
+
+    color:#005847;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#playButton:hover{
+
+    transform:scale(1.08);
+
+    background:#A7F6DA;
+
+    box-shadow:0 0 20px rgba(140,236,203,.45);
+
+}
+/*==================================
+          MAIN PAGE
+==================================*/
+
+.overlay{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.35);
+
+}
+
+/*==================================
+            CARD
+==================================*/
+
+.card{
+
+    width:650px;
+
+    padding:60px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/*==================================
+            HEADING
+==================================*/
+
+.card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:72px;
+
+    color:white;
+
+    margin-bottom:30px;
+
+    text-shadow:2px 2px 10px rgba(0,0,0,.35);
+
+}
+
+/*==================================
+            PARAGRAPH
+==================================*/
+
+.card p{
+
+    color:white;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/*==================================
+            BUTTON
+==================================*/
+
+.button{
+
+    display:inline-block;
+
+    padding:16px 45px;
+
+    text-decoration:none;
+
+    background:#A8F5D4;
+
+    color:#00695C;
+
+    font-weight:600;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:white;
+
+    transform:scale(1.05);
+
+}
+
+/*==================================
+          RESPONSIVE
+==================================*/
+
+@media(max-width:768px){
+
+    .music-player{
+
+        width:320px;
+
+        padding:25px;
+
+    }
+
+    .albumCover{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .music-player h2{
+
+        font-size:22px;
+
+    }
+
+    .card{
+
+        width:90%;
+
+        padding:40px 25px;
+
+    }
+
+    .card h1{
+
+        font-size:50px;
+
+    }
+
+    .card p{
+
+        font-size:16px;
+
+    }
+
+}

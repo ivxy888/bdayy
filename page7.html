@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter 18 Unlocked</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="page7.css">
+
+</head>
+
+<body class="chapter-page">
+
+    <!-- Background Music -->
+
+    <audio id="bgMusic" loop>
+
+        <source src="song7.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- Intro Music Player -->
+
+    <div id="introScreen">
+
+        <div class="music-player">
+
+            <p class="nowPlaying">NOW PLAYING</p>
+
+            <h2>Long Live</h2>
+
+            <h3>Taylor Swift</h3>
+
+            <button id="playButton">
+
+                ▶ PLAY
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Final Page -->
+
+    <div class="chapter-overlay hidden" id="chapterContent">
+
+        <div class="chapter-card" id="chapterCard">
+
+            <h2>CHAPTER</h2>
+
+            <h1>18</h1>
+
+            <p class="unlock">UNLOCKED</p>
+
+            <div class="divider"></div>
+
+            <p class="message">
+
+                Happy 18th Birthday.<br><br>
+
+                Here's to new beginnings,<br>
+
+                new adventures,<br>
+
+                and a lifetime of memories.
+
+                <br><br>
+
+                💚
+
+            </p>
+
+            <p class="signature">
+
+                From,<br>
+
+                Mrs. Hyunjin (Danu)
+
+            </p>
+
+            <div class="divider"></div>
+
+            <p class="end">
+
+                THE END
+
+            </p>
+
+        </div>
+
+    </div>
+
+<script>
+
+const music = document.getElementById("bgMusic");
+
+const playButton = document.getElementById("playButton");
+
+playButton.addEventListener("click", async function(){
+
+    try{
+
+        await music.play();
+
+        document.getElementById("introScreen").style.display = "none";
+
+        const page = document.getElementById("chapterContent");
+
+        page.classList.remove("hidden");
+
+        setTimeout(function(){
+
+            document.getElementById("chapterCard").classList.add("show");
+
+        },500);
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,459 @@
+/*==========================
+        PAGE 6
+==========================*/
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/*==========================
+      INTRO SCREEN
+==========================*/
+
+#introScreen{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:url("background6.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    z-index:9999;
+
+}
+
+.music-player{
+
+    width:340px;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+}
+
+.nowPlaying{
+
+    color:white;
+
+    letter-spacing:4px;
+
+}
+
+.music-player h2{
+
+    color:white;
+
+    font-size:42px;
+
+}
+
+.music-player h3{
+
+    color:#69D7B0;
+
+}
+
+#playButtonPage6{
+
+    padding:16px 55px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#69D7B0;
+
+    cursor:pointer;
+
+}
+
+/*==========================
+      PAGE
+==========================*/
+
+.cortis-page{
+
+    margin:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:url("background6.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/*==========================
+      OVERLAY
+==========================*/
+
+.cortis-overlay{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+/*==========================
+      DATABASE
+==========================*/
+
+.cortis-terminal{
+
+    width:500px;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    background:rgba(0,0,0,.82);
+
+    backdrop-filter:blur(12px);
+
+    border:2px solid #6FD8B5;
+
+    box-shadow:0 0 30px rgba(111,216,181,.35);
+
+    color:#A8F5D4;
+
+    font-family:'Share Tech Mono', monospace;
+
+}
+
+/*==========================
+      HEADINGS
+==========================*/
+
+.cortis-terminal h1{
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+    color:#6FD8B5;
+
+    letter-spacing:3px;
+
+}
+
+.cortis-terminal h2{
+
+    font-size:20px;
+
+    color:#ff8f8f;
+
+    margin-bottom:20px;
+
+}
+
+.intro{
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+/*==========================
+      HINT BOX
+==========================*/
+
+.hint{
+
+    margin:30px 0;
+
+    padding:20px;
+
+    border:1px solid rgba(111,216,181,.4);
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.hint p{
+
+    margin:8px 0;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/*==========================
+      INPUT
+==========================*/
+
+#password{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    background:#1d1d1d;
+
+    color:#A8F5D4;
+
+    font-size:18px;
+
+    text-align:center;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================
+      BUTTON
+==========================*/
+
+.cortis-terminal button{
+
+    display:block;
+
+    margin:25px auto 0;
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#69D7B0;
+
+    color:#003d31;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cortis-terminal button:hover{
+
+    transform:scale(1.05);
+
+    background:#A8F5D4;
+
+}
+
+/*==========================
+      MESSAGE
+==========================*/
+
+#message{
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    min-height:45px;
+
+}
+
+/*==========================
+      LOADING BAR
+==========================*/
+
+#loading{
+
+    display:none;
+
+    margin-top:30px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:16px;
+
+    margin-top:15px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#222;
+
+}
+
+#bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:#6FD8B5;
+
+    transition:width .2s;
+
+}
+
+#loadingText{
+
+    margin-bottom:15px;
+
+    color:#A8F5D4;
+
+}
+
+/*==========================
+      SECRET IMAGE
+==========================*/
+
+#secretImage{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:url("background6.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+#secretImage img{
+
+    width:75vw;
+
+    max-width:1200px;
+
+    max-height:75vh;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+
+    animation:fadeIn 1s ease;
+
+}
+
+.nextButton{
+
+    margin-top:35px;
+
+    padding:15px 45px;
+
+    background:#69D7B0;
+
+    color:#003d31;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.nextButton:hover{
+
+    background:#A8F5D4;
+
+    transform:scale(1.05);
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}

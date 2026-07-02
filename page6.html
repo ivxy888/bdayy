@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CORTIS DATABASE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="page6.css">
+
+</head>
+
+<body class="cortis-page">
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+
+    <source src="song6.mp3" type="audio/mpeg">
+
+    Your browser does not support the audio element.
+
+</audio>
+
+<!-- Music Intro -->
+
+<div id="introScreen">
+
+    <div class="music-player">
+
+        <p class="nowPlaying">NOW PLAYING</p>
+
+        <h2>Go</h2>
+
+        <h3>Cortis</h3>
+
+        <button id="playButtonPage6" onclick="startExperience()">
+
+            ▶ PLAY
+
+        </button>
+
+    </div>
+
+</div>
+
+    <div class="cortis-overlay hidden" id="databasePage">
+
+        <div class="cortis-terminal">
+
+            <h1>CORTIS DATABASE</h1>
+
+            <h2>ACCESS LEVEL : DENIED</h2>
+
+            <p class="intro">
+                Authentication Required.<br>
+                Only a true Cortis member can continue.
+            </p>
+
+            <div class="hint">
+
+                <p>🔒 The authentication code contains <strong>5 letters</strong>.</p>
+
+                <p>💚 Every letter comes from one special memory.</p>
+
+                <p>⭐ Take the <strong>FIRST LETTER</strong> of each answer.</p>
+
+                <br>
+
+                <p>① Current leader</p>
+
+                <p>② Official fandom</p>
+
+                <p>③ Latest title track</p>
+
+                <p>④ Whose birthday</p>
+
+                <p>⑤ Current song</p>
+
+            </div>
+
+            <input
+                type="text"
+                id="password"
+                maxlength="5"
+                placeholder="MEMORY KEY">
+
+            <button onclick="checkPassword()">
+
+                VERIFY
+
+            </button>
+
+            <p id="message"></p>
+
+            <div id="loading">
+
+                <p id="loadingText">
+
+                    Connecting to Cortis Database...
+
+                </p>
+
+                <div class="progress">
+
+                    <div id="bar"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- Secret Image -->
+
+<div id="secretImage">
+
+    <img src="Background7.jpg" alt="Unlocked">
+
+    <a href="page7.html" class="nextButton">
+
+        Continue →
+
+    </a>
+
+</div>
+
+<script>
+
+const music = document.getElementById("bgMusic");
+
+function startExperience(){
+
+    const music = document.getElementById("bgMusic");
+
+    music.play();
+
+    document.getElementById("introScreen").style.display = "none";
+
+    document.getElementById("databasePage").classList.remove("hidden");
+
+}
+
+function checkPassword() {
+
+    const answer = document.getElementById("password").value.toUpperCase();
+
+    const message = document.getElementById("message");
+
+    /* CHANGE THIS TO YOUR REAL CODE */
+    if (answer === "MCRDG") {
+
+        message.innerHTML = "✔ ACCESS GRANTED";
+
+        message.style.color = "#8BFFD1";
+
+        document.getElementById("loading").style.display = "block";
+
+        const bar = document.getElementById("bar");
+
+        const loadingText = document.getElementById("loadingText");
+
+        let width = 0;
+
+        const interval = setInterval(function () {
+
+            width++;
+
+            bar.style.width = width + "%";
+
+            if (width == 25) {
+
+                loadingText.innerHTML = "Connecting to Cortis Database...";
+
+            }
+
+            if (width == 50) {
+
+                loadingText.innerHTML = "Searching Shared Memories...";
+
+            }
+
+            if (width == 75) {
+
+                loadingText.innerHTML = "Decrypting Memory Archive...";
+
+            }
+
+            if (width == 100) {
+
+                loadingText.innerHTML = "Welcome Back ✔";
+
+                clearInterval(interval);
+
+                setTimeout(function () {
+
+                     document.getElementById("databasePage").style.display = "none";
+
+                     document.getElementById("secretImage").style.display = "flex";
+
+                },1500);
+
+            }
+
+        },30);
+
+    }
+
+    else {
+
+        message.innerHTML =
+        "❌ ACCESS DENIED<br><br>Hint: Take the FIRST LETTER of each answer. No spaces. All uppercase.";
+
+        message.style.color = "#ff8f8f";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

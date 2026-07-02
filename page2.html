@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Just For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="page2.css">
+
+</head>
+
+<body class="message-page">
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="song2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Intro -->
+    <div id="introScreen">
+
+        <div class="music-player">
+
+            <p class="nowPlaying">NOW PLAYING</p>
+
+            <h2>JoyRide</h2>
+
+            <h3>Cortis</h3>
+
+            <button id="playButton" onclick="startExperience()">
+                ▶ PLAY
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Main Page -->
+    <div class="page-overlay hidden" id="pageContent">
+
+        <div class="message-container">
+
+            <!-- Left Image -->
+            <div class="image-side">
+
+                <img src="photo.jpg" alt="Birthday Photo">
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="text-side">
+
+                <h1>Just For You </h1>
+
+                <div class="message-box">
+
+                    <p>
+                        Life won't always be easy, and there will be days that feel
+                        heavier than others. Whenever those moments come, remember
+                        how incredibly strong, kind, and capable you truly are.
+                        Every obstacle you overcome is shaping you into an even more
+                        wonderful person. Never lose faith in yourself, because brighter
+                        days always come after the darkest nights.
+                    </p>
+
+                    <p>
+                        Happy 18th Birthday! 🎉 May this special milestone open the
+                        door to endless happiness, unforgettable memories, exciting
+                        adventures, and dreams coming true. Keep smiling, keep believing,
+                        and never stop being the amazing person you are.
+                        Wishing you nothing but love, laughter, and success in every
+                        chapter of your journey.
+                    </p>
+
+                </div>
+
+                <a href="page3.html" class="next-button">
+                    Make it more fun →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const music = document.getElementById("bgMusic");
+
+        function startExperience() {
+
+            music.play();
+
+            document.getElementById("introScreen").style.display = "none";
+
+            document.getElementById("pageContent").classList.remove("hidden");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
